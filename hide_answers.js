@@ -1,0 +1,29 @@
+(function () {
+  document.querySelectorAll('.mcq-option.--correct, .mcq-option.--incorrect').forEach(el => {
+    el.classList.remove('--correct', '--incorrect');
+  });
+
+  document.querySelectorAll('.letter.--chosen').forEach(el => {
+    el.classList.remove('--chosen');
+  });
+
+  document.querySelectorAll('.icon.--correct, .icon.--incorrect').forEach(el => {
+    el.classList.remove('--correct', '--incorrect');
+  });
+
+  document.querySelectorAll('.LearnosityDistractor').forEach(el => {
+    el.hidden = true;
+  });
+
+  document.querySelectorAll('.lrn-mcq-option.lrn_correct, .lrn-mcq-option.lrn_incorrect, .lrn-mcq-option.lrn_valid').forEach(el => {
+    el.classList.remove('lrn_correct', 'lrn_incorrect', 'lrn_valid', 'lrn_selected');
+  });
+
+  document.querySelectorAll('[data-test-score-number="true"]').forEach(el => {
+    el.style.visibility = 'hidden';
+  });
+
+  document.querySelectorAll('.v-mark-big, .x-mark-big, .c-mark-big').forEach(el => {
+    el.style.visibility = 'hidden';
+  });
+})();
